@@ -1,15 +1,20 @@
 /* Body Section */
 
+  * {
+    box-sizing: border-box;
+  }
+
   body {
     background-color: #5ddcff;
-    /* padding: 0;
-    margin: 0; */
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
   }
 
 /* Main Section */
 
   main {
-    max-width: 80%;
+    max-width: 960px;
     margin: auto;
   }
 
@@ -19,11 +24,95 @@
     margin: 50px 0 25px 20px;
   }
 
+  header h1 {
+    font-size: 2.5em;
+    color: #fff;
+    margin: 0;
+  }
+
+  header p {
+    padding-left: 5px;
+    font-size: 1em;
+    font-weight: 600;
+    color: #2a6170;
+    margin: 0;
+  }
+
 /* Form Section */
 
   section {
     background-color: #82d0e6;
     padding: 50px;
-    /* border: 1px solid #333; */
     box-shadow: 1px 10px 20px rgba(0,0,0,0.19), 1px 6px 6px rgba(0,0,0,0.23);
+  }
+
+  section form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    padding: 0;
+    margin: 0;
+  }
+
+  section form .label {
+    justify-self: end;
+    padding-right: 10px;
+  }
+
+  section form .lastCol {
+    grid-column: 2 / 3;
+  }
+
+  section form ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  section form ul#lang li:nth-child(odd) {
+    float: left;
+  }
+
+  section form ul#lang li:nth-child(even) {
+    padding-left: 8em;
+  }
+
+  section form input[type="text"], 
+  section form input[type="email"],
+  section form input[type="number"],
+  section form textarea {
+    width: 60%;
+  }
+
+  section form input[type="submit"] {
+    padding: 10px;
+    border: 0;
+  }
+
+/* Media Query */
+
+  @media(max-width: 768px) {
+    body {
+      font-size: 0.9em;
+      line-height: 1.2;
+    }
+
+    main {
+      margin: 0 1.1em 1.1em 1.1em;
+    }
+
+    section {
+      padding: 1em;
+    }
+
+    section form input[type="text"], 
+    section form input[type="email"],
+    section form input[type="number"],
+    section form textarea {
+      width: 100%;
+    }
+
+    section form ul#lang li:nth-child(even) {
+      padding-left: 4em;
+    }
   }

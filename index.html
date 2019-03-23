@@ -12,44 +12,71 @@
 
     <header>
       <h1 id="title">Cyril Survey</h1>
-      <p id="description">Let us know what type of programming language you like</p>
+      <p id="description">A survery about most popular programming lanugage and why!</p>
     </header>
 
     <section>
-      <form id="survery-form">
-        <label id="name-label" for="name">* Name: </label>
-        <input type="text" name="name" id="name" placeholder="Your Name Here"><br>
+      <form id="survey-form">
+        
+        <div class="label"><label id="name-label" for="name">* Name: </label></div>
+        <div class="input"><input type="text" name="name" id="name" placeholder="Your Name Here" required></div>
 
-        <label id="email-label" for="email">* Email: </label>
-        <input type="email" name="email" id="email" placeholder="Enter Email Here"><br>
+        <div class="label"><label id="email-label" for="email">* Email: </label></div>
+        <div class="input"><input type="email" name="email" id="email" placeholder="Enter Email Here" required></div>
+  
+        <div class="label"><label for="gender">* Gender: </label></div>
+        <div class="input">
+          <input type="radio" name="gender" id="gender" value="male">Male
+          <input type="radio" name="gender" id="gender" value="female">Female
+        </div>
+        
+        <div class="label"><label for="number" id="number-label">* Range of experience: </label></div>
+        <div class="input"><input type="number" name="number" id="number" min="0" max="20" placeholder="Range from 0 - 20"></div>
+       
+        <div class="label"><label for="dropdown">What type of programmer are you: </label></div>
+        <div class="input"> 
+          <select name="dropdown" id="dropdown">
+            <option value="backend">Back-end developer</option>
+            <option value="fullstack">Full-stack developer</option>
+            <option value="frontend">Front-end developer</option>
+            <option value="mobile">Mobile developer</option>
+            <option value="desktop">Desktop developer</option>
+            <option value="student">Student</option>
+          </select>
+        </div>
 
-        <label for="number" id="number-label">* Age: </label>
-        <input type="number" name="number" id="number" min="20" max="80" placeholder="20-80"><br>
+        <div class="label"><label for="checkbox">What languages you prefer</label></div>
+        <div class="input">
+          <ul id="lang">
+            <li><input type="checkbox" name="checkbox" value="cplus">C++</li>
+            <li><input type="checkbox" name="checkbox" value="csharp">C#</li>
+            <li><input type="checkbox" name="checkbox" value="java">Java</li>
+            <li><input type="checkbox" name="checkbox" value="perl">Perl</li>
+            <li><input type="checkbox" name="checkbox" value="php">PHP</li>
+            <li><input type="checkbox" name="checkbox" value="php">Python</li>
+            <li><input type="checkbox" name="checkbox" value="php">Ruby</li>
+            <li><input type="checkbox" name="checkbox" value="javascript">JavaScript</li>
+          </ul>
+        </div>
 
-        <label for="dropdown">Best option to descripe your role: </label>
-        <select name="dropdown" id="dropdown">
-          <option value="student">Student</option>
-          <option value="FullTimeJob">Full Time Job</option>
-          <option value="PartTimeJob">Part Time Job</option>
-          <option value="FreeLancer">Freelancer</option>
-          <option value="BusinessOwner">Business Owner</option>
-          <option value="Other">Other</option>
-        </select><br>
+        <div class="label"><label for="checkbox">What criteria wo </label></div>
+        <div class="input">
+          <ul>
+            <li><input type="checkbox" name="checkbox" value="popular">Popularity</li>
+            <li><input type="checkbox" name="checkbox" value="support">Community Support</li>
+            <li><input type="checkbox" name="checkbox" value="ease">Ease of use</li>
+            <li><input type="checkbox" name="checkbox" value="demand">Job Demand</li>
+          </ul>
+        </div>
 
-        <label for="checkbox">What you like most about web: </label>
-        <input type="checkbox" name="checkbox" value="Accessibility">Accessibility
-        <input type="checkbox" name="checkbox" value="Availability">Availability
-        <input type="checkbox" name="checkbox" value="Design">Design
-        <input type="checkbox" name="checkbox" value="Flexibility">Flexibility<br>
+        <div class="label"><label for="comments">More Comments: </label></div>
+        <div class="input">
+          <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+        </div>
 
-        <label for="gender">Gender: </label>
-        <input type="radio" name="gender" id="gender" value="male">Male
-        <input type="radio" name="gender" id="gender" value="female">Female<br>
-
-        <label for="comments">More Comments: </label>
-        <textarea name="comments" id="comments" cols="30" rows="10"></textarea><br>
-
-        <input type="submit" value="Submit" id="submit">
+        <div class="lastCol">
+          <input type="submit" value="Submit" id="submit">
+        </div>
 
       </form>
     </section>
